@@ -32,6 +32,14 @@
 
 //CODE HERE
 
+let pizza = {
+    name: 'Supreme',
+    price: 15,
+    category: 'entree',
+    popularity: 70,
+    rating: 90,
+    tags: ['dairy-allergen', 'gluten-free', 'family size',]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +51,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +61,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +71,8 @@
 */
 
 //CODE HERE
-
+let {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +82,8 @@
 */
 
 //CODE HERE
-
+let {category} = pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,6 +98,52 @@
 */
 
 //CODE HERE
+let foodArr = [
+    {
+        name: 'Supreme',
+        price: 15,
+        category: 'entree',
+        popularity: 70,
+        rating: 90,
+        tags: ['dairy-allergen', 'gluten-free', 'family size',]
+    },
+    {
+        name: 'pepperoni',
+        price: 10,
+        category: 'entree',
+        popularity: 100,
+        rating: 90,
+        tags: ['dairy-allergen', 'deep-dish', 'family size',]
+    },
+    {
+        name: 'poppcorn shrimp',
+        price: 8.99,
+        category: 'appetizer',
+        popularity: 100,
+        rating: 90,
+        tags: ['seafood-allergen', 'gluten-allergen', 'basket platter',]
+    },
+    {
+        name: 'Hawaiian',
+        price: 18,
+        category: 'entree',
+        popularity: 60,
+        rating: 50,
+        tags: ['dairy-allergen', 'gluten-free', 'family size',]
+    },
+    {
+        name: 'Meat Lover',
+        price: 18,
+        category: 'entree',
+        popularity: 60,
+        rating: 90,
+        tags: ['dairy-allergen', 'contains pork', 'family size',]
+    }
+]    
+    
+    
+    
+    
 
 
 
@@ -104,8 +160,21 @@
 */
 
 //CODE HERE
+const certainTag = foodArr.filter((food) => {
+    if (food.tags === tags) return tags
+})
+    
+    // for (let i = 0; i < foodArr.length; i++) {
+    //     if (foodArr[i].tags[i] === 'gluten-free')
+    //     return 'gluten-free'
+    
+    
+}
+    
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+certainTag('gluten-free')
+// const filteredFood = filter(foodArr, 'gluten-free', certainTag)
+// console.log(filteredFood)
 
 
 

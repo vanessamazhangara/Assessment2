@@ -30,12 +30,25 @@
 */
 
 //CODE HERE
+class Ticket {
+    constructor(items, orderTime, customerId) {
+        this.items = items;
+        this.orderTime = orderTime;
+        this.customerId = customerId;
+        this.status = queued;
 
+    
+    updateStatus(newStatus) {
+        this.status = newStatus
+        console.log(`The order for customer ${this.customerId} is now ${this.status}`);
+    }
+    }
 
 
 /*
     Create a new instance of your class.
     Save it to a variable called `firstTicket`.
+
 
     You can use this sample data or make
     up your own:
@@ -45,7 +58,7 @@
 */
 
 //CODE HERE
-
+ let firstTicket = new Ticket(['pizza', 'bread', 'soda',], '7:03 PM', 575)
 
 /*
     Call the `updateStatus` method on
@@ -54,3 +67,4 @@
 */
 
 //CODE HERE
+console.log(firstTicket.updateStatus('cooking'))

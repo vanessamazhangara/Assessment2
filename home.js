@@ -22,7 +22,9 @@
 */
 
 //CODE HERE
+greetUser = (username) => `Welcome back, ${username}`
 
+console.log(greetUser('Andrew'))
 
 
 
@@ -50,8 +52,15 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+canWeDeliver = (zipCode) => {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++){
+        if (deliveryAreaZipCodes[i] === zipCode) return 'You\'re in our delivery zone!'
+    } return 'Sorry, we can\'t deliver to that address'
+    
+}
 
-
+console.log(canWeDeliver(84606))
+console.log(canWeDeliver(85205))
 
 /* 
     Problem 2 Continued
@@ -71,7 +80,13 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+canWeDeilverTwo = (zipCode) => {
+    if (deliveryAreaZipCodes.includes(zipcode)) return `You're in our delivery zone!`
+    return `Sorry, we can't deliver to that address`
+}
 
+console.log(canWeDeliver(84606))
+console.log(canWeDeliver(85205))
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -107,6 +122,25 @@ const deals = [
 */
 
 //CODE HERE
+// let newDeal = deals[0]
+// console.log(newDeal)
+ 
+let firstNewDeal = deals[0].title.replace('15% Off', '10% Off') // <===== My final answer.
+console.log(firstNewDeal)
+
+// let {title} = newDeal
+// title = title.replace('10% Off!')
+// console.log(title)
+
+
+
+
+// // const {title: newTitle} = deals
+// // console.log(newTitle)
+
+// // console.log(deals.title)
+// // firstNewDeal = deals.title
+// // console.log(deals.title)
 
 
 
@@ -124,3 +158,8 @@ const deals = [
 */
 
 //CODE HERE
+
+let secondNewDeal = deals[1].desc.replace('March', 'April').trim()
+
+console.log(secondNewDeal)
+
