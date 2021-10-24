@@ -160,20 +160,24 @@ let foodArr = [
 */
 
 //CODE HERE
-const certainTag = foodArr.filter((food) => {
-    if (food.tags === tags) return tags
-})
+const certainTag = foodArr.filter( (food) => food.tags.includes(food))
+
+/// I am having trouble with the syntax??
+
+
+
+console.log(certainTag)
     
     // for (let i = 0; i < foodArr.length; i++) {
     //     if (foodArr[i].tags[i] === 'gluten-free')
     //     return 'gluten-free'
     
     
-}
+
     
 
-certainTag('gluten-free')
-// const filteredFood = filter(foodArr, 'gluten-free', certainTag)
+
+ //const filteredFood = filter(foodArr, 'gluten-free', certainTag)
 // console.log(filteredFood)
 
 
@@ -218,7 +222,9 @@ certainTag('gluten-free')
 */
 
 //CODE HERE
-
+const filterByProperty = foodArr.filter((property, number, type)) => { 
+   return number.rating > type; 
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -228,3 +234,4 @@ certainTag('gluten-free')
 */
 
 //CODE HERE
+ filterByProperty('rating', 60, 60)
