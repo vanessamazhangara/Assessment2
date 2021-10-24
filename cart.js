@@ -36,10 +36,13 @@ const cart = [
 //CODE HERE
 
 
-  const summedPrice = cart.reduce(acc, obj) => acc + obj.price, 0);
+//   const summedPrice = cart.reduce((acc, obj) => { 
+//       return acc + obj.price
+//     },
+//        0);
   
   
-  console.log(summedPrice)
+//   console.log(summedPrice)
 
 
 //////////////////PROBLEM 2////////////////////
@@ -57,10 +60,14 @@ const cart = [
     decimals, for example: .06 for a 6% tax.
 */
 
-//CODE HERE
+// CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+    appliedTax = cartTotal * tax; 
+    cartTotal -= couponValue;
+    return cartTotal + appliedTax
+}
 
-
-
+console.log(calcFinalPrice(10, 5, .06))
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -83,7 +90,10 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
-
+   name: 'string' (identify the customer)
+   orderNumber: number(to identify the order)
+   totalPrice: number (we would want to know the total of their order)
+   coupon: boolean (if they include a coupon)
 */
 
 /*
@@ -92,3 +102,10 @@ const cart = [
 */
 
 //CODE HERE
+
+// const customer = {
+//     name: 'Jane Doe',
+//     orderNumber: 20,
+//     totalPrice: 25.60
+//     coupon: false
+// }

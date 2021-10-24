@@ -159,18 +159,18 @@ let foodArr = [
     your food objects has.
 */
 
-//CODE HERE
-const certainTag = foodArr.filter( (food) => food.tags.includes(food))
+// //CODE HERE
+// const certainTag = foodArr.filter((food) => food.tags.includes('dairy-allergen'))
 
-/// I am having trouble with the syntax??
+// /// I am having trouble with the syntax??
 
 
 
-console.log(certainTag)
+// console.log(certainTag)
     
-    // for (let i = 0; i < foodArr.length; i++) {
-    //     if (foodArr[i].tags[i] === 'gluten-free')
-    //     return 'gluten-free'
+//     // for (let i = 0; i < foodArr.length; i++) {
+//     //     if (foodArr[i].tags[i] === 'gluten-free')
+//     //     return 'gluten-free'
     
     
 
@@ -221,17 +221,28 @@ console.log(certainTag)
     Return the filtered array from the entire function
 */
 
-//CODE HERE
-const filterByProperty = foodArr.filter((property, number, type)) => { 
-   return number.rating > type; 
+// //CODE HERE
+function filterByProperty (property, number, type) {
+    const foodFilter = foodArr.filter((food) => { 
+        if (type == 'above') {
+          return (food[`${property}`] > number)
+        } else if ( type == 'below') {
+            return (food[`${property}`] < number)
+        }
+         
+     })
+     return foodFilter
 }
 
-/*
-    Invoke the `filterByProperty` function passing
-    in a value for each paramter.
 
-    You'll have to console.log to see the filtered array
-*/
 
-//CODE HERE
- filterByProperty('rating', 60, 60)
+
+// /*
+//     Invoke the `filterByProperty` function passing
+//     in a value for each paramter.
+
+//     You'll have to console.log to see the filtered array
+// */
+
+// //CODE HERE
+ console.log(filterByProperty('rating', 60, 'below'))
